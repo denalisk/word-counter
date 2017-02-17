@@ -24,7 +24,7 @@ namespace WordCounterApp.Objects
         }
         public string GetTargetWord()
         {
-            return "blah";
+            return _targetWord;
         }
 
     }
