@@ -3,12 +3,22 @@
 }
 
 <div class="container">
-    <h2>Find out how <span class="highlight">many times</span> a word appears in a sentence or paragraph!</h2>
-    <form id="" action="/" method="post">
-        <label for="target-word">Give me a word!</label>
-        <input type="text" id="target-word" name="target-word" placeholder="word" required>
-        <label for="long-string">Give me a sentence or a paragraph or a novel</label>
-        <input type="text" id="long-string" name="long-string" placeholder="Call me Ishmael" required>
+    <h2>Find out how many <span class="highlight">times</span> a word appears in a sentence or paragraph!</h2>
+    <form id="word-form" action="/" method="post">
+        <div class="row well form-group">
+            <label for="target-word">Give me a word!</label>
+            <input class="form-control" type="text" id="target-word" name="target-word" placeholder="word" required>
+            <div id="invalid-entry-target">
+                <p>Please only insert a single word</p>
+            </div>
+        </div>
+        <div class="row well form-group">
+            <label for="long-string">Give me a sentence or a paragraph or a novel!</label>
+            <input class="form-control" type="text" id="long-string" name="long-string" placeholder="Call me Ishmael" required>
+            <div id="invalid-entry">
+                <p>You gotta give me something =[ </p>
+            </div>
+        </div>
         <button id="form-submit" type="submit" class="btn btn-danger" name="button">Submit</button>
     </form>
 </div>

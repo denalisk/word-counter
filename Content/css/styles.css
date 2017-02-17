@@ -1,4 +1,40 @@
 span.highlight {
     color: blue;
     background-color: yellow;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.jumbotron {
+    background-color: #E8A20C;
+    text-align: center;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+body {
+    background-color: #0DFFDC;
+    font-family: monospace;
+}
+
+#invalid-entry, #invalid-entry-target {
+    padding-top: 5px;
+    display: none;
+    color: red;
+}
+
+.return-button {
+    margin-right: 50%;
+    margin-left: 50%;
+    width: 100px;
+    position: relative;
+    left: -50px;
+    top: 100px;
+}
+
+.well {
+    background-color: #E8A20C;
 }

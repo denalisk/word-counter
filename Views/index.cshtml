@@ -1,15 +1,16 @@
 @{
   Layout="Shared/_Layout.cshtml";
 }
-<div class="jumbotron">
-    <h2>Hello and Welcome</h2>
-</div>
 
-<div class="results-container">
+
+<div class="results-container container">
     <p>
-        Your word <span class="highlight">@Model.GetTargetWord()</span> appears in the phrase you put in (@Model.GetLongPreview()) <span class="highlight">@Model.GetWordCount()</span> time(s)!
-
+        Your word <span class="highlight">@Model.GetTargetWord()</span> appears in the phrase you put in ("<strong>@Model.GetLongPreview()</strong>") <span class="highlight">@Model.GetWordCount()</span> time(s)!
+"
         Quite shocking, isn't it?
     </p>
+    <form class="return form" action="/" method="get">
+        <button type="submit" class="btn btn-warning return-button">Again!</button>
+    </form>
 
 </div>
