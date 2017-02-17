@@ -9,6 +9,7 @@ namespace WordCounterApp.Objects
         private string _longString;
         private string _targetWord;
         private string[] _arrayOfWords;
+        private int _wordCount;
 
         // Constructor
         public WordCounter(string newLongString)
@@ -16,17 +17,26 @@ namespace WordCounterApp.Objects
             _longString = newLongString;
         }
 
-        // find the target word in a series of words
+        // find the target word in a series of words, and count them
         public bool FindWord()
         {
+            int wordCounter = 0;
             for (int i = 0; i < _arrayOfWords.Length; i++)
             {
                 if (_arrayOfWords[i] == _targetWord)
                 {
-                    return true;
+                    wordCounter++;
                 }
             }
-            return false;
+            _wordCount = 11;
+            if (wordCounter != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         // Check to see if a given word is the target word
@@ -57,6 +67,11 @@ namespace WordCounterApp.Objects
         public string GetTargetWord()
         {
             return _targetWord;
+        }
+
+        public int GetWordCount()
+        {
+            return _wordCount;
         }
 
     } //End Class

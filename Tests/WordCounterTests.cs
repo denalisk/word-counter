@@ -96,5 +96,21 @@ namespace WordCounterApp.Objects
             // Assert
             Assert.Equal(true, testResult);
         }
+
+        [Fact]
+        // test if the program can return the number of times a word appears in a string
+        public void FindWord_CountInstances_Count()
+        {
+            // Arrange
+            string newLongString = "This is a string";
+            string newTargetWord = "string";
+            WordCounter newWordCounter = new WordCounter(newLongString);
+            newWordCounter.SetTargetWord(newTargetWord);
+            newWordCounter.StringSplitter();
+            // Act
+            newWordCounter.FindWord();
+            // Assert
+            Assert.Equal(1, newWordCounter.GetWordCount());
+        }
     }
 }
