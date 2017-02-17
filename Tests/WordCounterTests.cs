@@ -2,34 +2,34 @@ using Xunit;
 using System;
 using System.Collections.Generic;
 
-namespace WordCounterApp.Objects
+namespace RepeatCounterApp.Objects
 {
-    public class WordCounterTest
+    public class RepeatCounterTest
     {
         [Fact]
         // test if the program can successfully grab the large string input from the user
-        public void WordCounterConstructor_GetSetLongString_LongString()
+        public void RepeatCounterConstructor_GetSetLongString_LongString()
         {
             // Arrange
             string newLongString = "This is a string";
             // Act
-            WordCounter newWordCounter = new WordCounter(newLongString);
+            RepeatCounter newRepeatCounter = new RepeatCounter(newLongString);
             // Assert
-            Assert.Equal(newLongString, newWordCounter.GetLongString());
+            Assert.Equal(newLongString, newRepeatCounter.GetLongString());
         }
 
         [Fact]
         // test to see if the program can grab the target word input from the user successfully
-        public void WordCounterConstructor_GetSetTargetWord_TargetWord()
+        public void RepeatCounterConstructor_GetSetTargetWord_TargetWord()
         {
             // Arrange
             string newLongString = "This is a string";
             string newTargetWord = "string";
-            WordCounter newWordCounter = new WordCounter(newLongString);
+            RepeatCounter newRepeatCounter = new RepeatCounter(newLongString);
             // Act
-            newWordCounter.SetTargetWord(newTargetWord);
+            newRepeatCounter.SetTargetWord(newTargetWord);
             // Assert
-            Assert.Equal(newTargetWord, newWordCounter.GetTargetWord());
+            Assert.Equal(newTargetWord, newRepeatCounter.GetTargetWord());
         }
 
         [Fact]
@@ -38,14 +38,14 @@ namespace WordCounterApp.Objects
         {
             // Arrange
             string newLongString = "This is a string";
-            WordCounter newWordCounter = new WordCounter(newLongString);
+            RepeatCounter newRepeatCounter = new RepeatCounter(newLongString);
             string[] resultsList = new string[] {"This", "is", "a", "string"};
             // Act
-            newWordCounter.StringSplitter();
+            newRepeatCounter.StringSplitter();
             // Assert
-            for (int i = 0; i < newWordCounter.GetArrayOfWords().Length; i++)
+            for (int i = 0; i < newRepeatCounter.GetArrayOfWords().Length; i++)
             {
-                Assert.Equal(resultsList[i], newWordCounter.GetArrayOfWords()[i]);
+                Assert.Equal(resultsList[i], newRepeatCounter.GetArrayOfWords()[i]);
             }
         }
 
@@ -56,11 +56,11 @@ namespace WordCounterApp.Objects
             // Arrange
             string newLongString = "This is a string";
             string newTargetWord = "string";
-            WordCounter newWordCounter = new WordCounter(newLongString);
-            newWordCounter.SetTargetWord(newTargetWord);
-            newWordCounter.StringSplitter();
+            RepeatCounter newRepeatCounter = new RepeatCounter(newLongString);
+            newRepeatCounter.SetTargetWord(newTargetWord);
+            newRepeatCounter.StringSplitter();
             // Act
-            bool testResult = newWordCounter.CheckWord(newWordCounter.GetArrayOfWords()[0]);
+            bool testResult = newRepeatCounter.CheckWord(newRepeatCounter.GetArrayOfWords()[0]);
             // Assert
             Assert.Equal(false, testResult);
         }
@@ -72,11 +72,11 @@ namespace WordCounterApp.Objects
             // Arrange
             string newLongString = "This is a string";
             string newTargetWord = "string";
-            WordCounter newWordCounter = new WordCounter(newLongString);
-            newWordCounter.SetTargetWord(newTargetWord);
-            newWordCounter.StringSplitter();
+            RepeatCounter newRepeatCounter = new RepeatCounter(newLongString);
+            newRepeatCounter.SetTargetWord(newTargetWord);
+            newRepeatCounter.StringSplitter();
             // Act
-            bool testResult = newWordCounter.CheckWord(newWordCounter.GetArrayOfWords()[3]);
+            bool testResult = newRepeatCounter.CheckWord(newRepeatCounter.GetArrayOfWords()[3]);
             // Assert
             Assert.Equal(true, testResult);
         }
@@ -88,11 +88,11 @@ namespace WordCounterApp.Objects
             // Arrange
             string newLongString = "This is a string";
             string newTargetWord = "string";
-            WordCounter newWordCounter = new WordCounter(newLongString);
-            newWordCounter.SetTargetWord(newTargetWord);
-            newWordCounter.StringSplitter();
+            RepeatCounter newRepeatCounter = new RepeatCounter(newLongString);
+            newRepeatCounter.SetTargetWord(newTargetWord);
+            newRepeatCounter.StringSplitter();
             // Act
-            bool testResult = newWordCounter.FindWord();
+            bool testResult = newRepeatCounter.FindWord();
             // Assert
             Assert.Equal(true, testResult);
         }
@@ -104,13 +104,13 @@ namespace WordCounterApp.Objects
             // Arrange
             string newLongString = "This is a string";
             string newTargetWord = "string";
-            WordCounter newWordCounter = new WordCounter(newLongString);
-            newWordCounter.SetTargetWord(newTargetWord);
-            newWordCounter.StringSplitter();
+            RepeatCounter newRepeatCounter = new RepeatCounter(newLongString);
+            newRepeatCounter.SetTargetWord(newTargetWord);
+            newRepeatCounter.StringSplitter();
             // Act
-            newWordCounter.FindWord();
+            newRepeatCounter.FindWord();
             // Assert
-            Assert.Equal(1, newWordCounter.GetWordCount());
+            Assert.Equal(1, newRepeatCounter.GetWordCount());
         }
     }
 }

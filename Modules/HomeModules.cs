@@ -1,6 +1,8 @@
 using Nancy;
+using System.Collections.Generic;
+using RepeatCounterApp.Objects;
 
-namespace WordCounterApp
+namespace RepeatCounterApp
 {
   public class HomeModule : NancyModule
   {
@@ -8,7 +10,15 @@ namespace WordCounterApp
     {
       Get["/"] = _ =>
       {
-          return View["index.cshtml"];
+          return View["forms.cshtml"];
+      };
+      Post["/"] = _ =>
+      {
+          RepeatCounter newRepeatCounter = new RepeatCounter(Request.Form["long-string"]);
+          newRepeatCounter.SetTargetWord(Request.Form["target-word"]);
+          newRepeatCounter.StringSplitter();
+          newRepeatCounter.FindWord();
+          return View["index.cshtml", newRepeatCounter];
       };
     }
   }

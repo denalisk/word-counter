@@ -1,20 +1,29 @@
 using System;
 using System.Collections.Generic;
 
-namespace WordCounterApp.Objects
+namespace RepeatCounterApp.Objects
 {
-    public class WordCounter
+    public class RepeatCounter
     {
         // Class variables
         private string _longString;
         private string _targetWord;
         private string[] _arrayOfWords;
         private int _wordCount;
+        private string _longPreview;
 
         // Constructor
-        public WordCounter(string newLongString)
+        public RepeatCounter(string newLongString)
         {
             _longString = newLongString;
+            if (newLongString.Length > 50)
+            {
+                _longPreview = newLongString.Substring(0, 45) + "...";
+            }
+            else
+            {
+                _longPreview = newLongString;
+            }
         }
 
         // find the target word in a series of words, and count the instances
@@ -72,6 +81,11 @@ namespace WordCounterApp.Objects
         public int GetWordCount()
         {
             return _wordCount;
+        }
+
+        public string GetLongPreview()
+        {
+            return _longPreview;
         }
 
     } //End Class
