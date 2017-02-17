@@ -18,5 +18,21 @@ namespace WordCounterApp.Objects
             Assert.Equal(newLongString, newWordCounter.GetLongString());
 
         }
+
+        [Fact]
+        public void WordCounterConstructor_GetSetTargetWord_TargetWord()
+        {
+            // Arrange
+            string newLongString = "This is a string";
+            string newTargetWord = "string";
+            WordCounter newWordCounter = new WordCounter(newLongString);
+
+            // Act
+            newWordCounter.SetTargetWord(newTargetWord);
+
+            // Assert
+            Assert.Equal(newTargetWord, newWordCounter.GetTargetWord());
+
+        }
     }
 }

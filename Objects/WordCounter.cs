@@ -6,6 +6,7 @@ namespace WordCounterApp.Objects
     public class WordCounter
     {
         private string _longString;
+        private string _targetWord;
 
         public WordCounter(string newLongString)
         {
@@ -16,5 +17,15 @@ namespace WordCounterApp.Objects
         {
             return _longString;
         }
+
+        public void SetTargetWord(string newTargetWord)
+        {
+            _targetWord = newTargetWord;
+        }
+        public string GetTargetWord()
+        {
+            return "blah";
+        }
+
     }
 }
