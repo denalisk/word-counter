@@ -5,15 +5,18 @@ namespace WordCounterApp.Objects
 {
     public class WordCounter
     {
+        // Class variables
         private string _longString;
         private string _targetWord;
         private string[] _arrayOfWords;
 
+        // Constructor
         public WordCounter(string newLongString)
         {
             _longString = newLongString;
         }
 
+        // Split the long string of words into separate discreet words by whitespaces
         public void StringSplitter()
         {
             _arrayOfWords = _longString.Split(' ');
@@ -37,5 +40,5 @@ namespace WordCounterApp.Objects
             return _targetWord;
         }
 
-    }
-}
+    } //End Class
+} // End Namespace
