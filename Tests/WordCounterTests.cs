@@ -50,7 +50,7 @@ namespace WordCounterApp.Objects
         }
 
         [Fact]
-        // test if the program can check target word against others
+        // test if the program can check target word against others, for false result
         public void CheckWord_SingleCheck_False()
         {
             // Arrange
@@ -62,6 +62,21 @@ namespace WordCounterApp.Objects
             bool testResult = newWordCounter.CheckWord(newWordCounter.GetArrayOfWords()[0]);
             // Assert
             Assert.Equal(false, testResult);
+        }
+
+        [Fact]
+        // test if the program can check target word against others, for true result
+        public void CheckWord_SingleCheck_True()
+        {
+            // Arrange
+            string newLongString = "This is a string";
+            string newTargetWord = "string";
+            WordCounter newWordCounter = new WordCounter(newLongString);
+            newWordCounter.StringSplitter();
+            // Act
+            bool testResult = newWordCounter.CheckWord(newWordCounter.GetArrayOfWords()[3]);
+            // Assert
+            Assert.Equal(true, testResult);
         }
     }
 }
