@@ -6,6 +6,7 @@ namespace WordCounterApp.Objects
     public class WordCounterTest
     {
         [Fact]
+        // test if the program can successfully grab the large string input from the user
         public void WordCounterConstructor_GetSetLongString_LongString()
         {
             // Arrange
@@ -17,6 +18,7 @@ namespace WordCounterApp.Objects
         }
 
         [Fact]
+        // test to see if the program can grab the target word input from the user successfully
         public void WordCounterConstructor_GetSetTargetWord_TargetWord()
         {
             // Arrange
@@ -30,6 +32,7 @@ namespace WordCounterApp.Objects
         }
 
         [Fact]
+        // test if the program can successfully break the large string into discreet segments
         public void WordLister_Split_LongStringSplit()
         {
             // Arrange
@@ -44,6 +47,21 @@ namespace WordCounterApp.Objects
             {
                 Assert.Equal(resultsList[i], newWordCounter.GetArrayOfWords()[i]);
             }
+        }
+
+        [Fact]
+        // test if the program can check target word against others
+        public void WordLister_Split_LongStringSplit()
+        {
+            // Arrange
+            string newLongString = "This is a string";
+            string newTargetWord = "string";
+            WordCounter newWordCounter = new WordCounter(newLongString);
+            newWordCounter.StringSplitter();
+            // Act
+            bool testResult = newWordCounter.CheckWord(newWordCounter.GetArrayOfWords()[0]);
+            // Assert
+            Assert.Equal(false, testResult);
         }
     }
 }
