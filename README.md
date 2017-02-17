@@ -10,11 +10,13 @@
 
 ## Specifications
 
-*
+* Can take a word from the user and return the number of times the word appears in a string, also taken from the user
+* Allows the user to play again, if they want
 
 
 #### Stretch Goals
 
+* Insert the full searched text on the results page with the target word highlighted
 
 ## Setup
 
