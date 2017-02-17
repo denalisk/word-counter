@@ -7,10 +7,20 @@ namespace WordCounterApp.Objects
     {
         private string _longString;
         private string _targetWord;
+        private string[] _arrayOfWords;
 
         public WordCounter(string newLongString)
         {
             _longString = newLongString;
+        }
+
+        public void StringSplitter()
+        {
+            _arrayOfWords = _longString.Split(' ');
+        }
+        public string[] GetArrayOfWords()
+        {
+            return _arrayOfWords;
         }
 
         public string GetLongString()

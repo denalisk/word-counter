@@ -36,13 +36,13 @@ namespace WordCounterApp.Objects
             string newLongString = "This is a string";
             string newTargetWord = "string";
             WordCounter newWordCounter = new WordCounter(newLongString);
-            List<string> resultsList = new List<string> {"This", "is", "a", "string"};
+            string[] resultsList = new string[] {"This", "is", "a", "string"};
             // Act
-            newWordCounter.StringSplitter()
+            newWordCounter.StringSplitter();
             // Assert
-            for (int i = 0; i < newWordCounter.GetWordList().Count; i++)
+            for (int i = 0; i < newWordCounter.GetArrayOfWords().Length; i++)
             {
-                Assert.Equal(resultsList[i], newWordCounter.GetWordList()[i]);
+                Assert.Equal(resultsList[i], newWordCounter.GetArrayOfWords()[i]);
             }
         }
     }
