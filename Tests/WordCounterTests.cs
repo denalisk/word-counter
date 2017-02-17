@@ -94,7 +94,6 @@ namespace WordCounterApp.Objects
             // Act
             bool testResult = newWordCounter.FindWord();
             // Assert
-
             Assert.Equal(true, testResult);
         }
     }

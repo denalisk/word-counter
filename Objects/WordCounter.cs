@@ -16,6 +16,19 @@ namespace WordCounterApp.Objects
             _longString = newLongString;
         }
 
+        // find the target word in a series of words
+        public bool FindWord()
+        {
+            // for (int i = 0; i < _arrayOfWords.Length; i++)
+            // {
+            //     if (_arrayOfWords[i] = _targetWord)
+            //     {
+            //         return true;
+            //     }
+            // }
+            return false;
+        }
+
         // Check to see if a given word is the target word
         public bool CheckWord(string word)
         {
