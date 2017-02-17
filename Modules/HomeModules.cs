@@ -1,6 +1,6 @@
 using Nancy
 
-namespace MyApp
+namespace WordCounterApp
 {
   public class HomeModule : NancyModule
   {
