@@ -6,7 +6,10 @@ namespace WordCounterApp
   {
     public HomeModule()
     {
-      // GETs and POSTs go HERE = _ =>
+      Get["/"] = _ =>
+      {
+          return View["index.cshtml"];
+      };
     }
   }
 }
