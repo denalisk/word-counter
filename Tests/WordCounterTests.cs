@@ -1,4 +1,5 @@
 using Xunit;
+using System;
 using System.Collections.Generic;
 
 namespace WordCounterApp.Objects
@@ -37,7 +38,6 @@ namespace WordCounterApp.Objects
         {
             // Arrange
             string newLongString = "This is a string";
-            string newTargetWord = "string";
             WordCounter newWordCounter = new WordCounter(newLongString);
             string[] resultsList = new string[] {"This", "is", "a", "string"};
             // Act
@@ -57,6 +57,7 @@ namespace WordCounterApp.Objects
             string newLongString = "This is a string";
             string newTargetWord = "string";
             WordCounter newWordCounter = new WordCounter(newLongString);
+            newWordCounter.SetTargetWord(newTargetWord);
             newWordCounter.StringSplitter();
             // Act
             bool testResult = newWordCounter.CheckWord(newWordCounter.GetArrayOfWords()[0]);
@@ -72,6 +73,7 @@ namespace WordCounterApp.Objects
             string newLongString = "This is a string";
             string newTargetWord = "string";
             WordCounter newWordCounter = new WordCounter(newLongString);
+            newWordCounter.SetTargetWord(newTargetWord);
             newWordCounter.StringSplitter();
             // Act
             bool testResult = newWordCounter.CheckWord(newWordCounter.GetArrayOfWords()[3]);
