@@ -19,13 +19,13 @@ namespace WordCounterApp.Objects
         // find the target word in a series of words
         public bool FindWord()
         {
-            // for (int i = 0; i < _arrayOfWords.Length; i++)
-            // {
-            //     if (_arrayOfWords[i] = _targetWord)
-            //     {
-            //         return true;
-            //     }
-            // }
+            for (int i = 0; i < _arrayOfWords.Length; i++)
+            {
+                if (_arrayOfWords[i] == _targetWord)
+                {
+                    return true;
+                }
+            }
             return false;
         }
 
