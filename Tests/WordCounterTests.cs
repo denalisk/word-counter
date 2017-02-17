@@ -80,5 +80,22 @@ namespace WordCounterApp.Objects
             // Assert
             Assert.Equal(true, testResult);
         }
+
+        [Fact]
+        // test if the program can find the target word in a large number of words
+        public void FindWord_AllCheck_Bool()
+        {
+            // Arrange
+            string newLongString = "This is a string";
+            string newTargetWord = "string";
+            WordCounter newWordCounter = new WordCounter(newLongString);
+            newWordCounter.SetTargetWord(newTargetWord);
+            newWordCounter.StringSplitter();
+            // Act
+            bool testResult = newWordCounter.FindWord();
+            // Assert
+
+            Assert.Equal(true, testResult);
+        }
     }
 }

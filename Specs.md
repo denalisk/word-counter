@@ -25,9 +25,9 @@
     * **OUTPUT:** false
 
 
-* Check to see if each word in the list of words is the target word. This will check the core functionality of the program, to check each word in the large string for the target word.
+* Check to see if the target word is contained in the series of words. This will test if the program can find the target word in a large number of words.
     * **INPUT:** ["This" "is" "a" "string"], "string"
-    * **OUTPUT:** false false false true
+    * **OUTPUT:** true
 
 
 * Count the number of time the target word found a match. This will check to see if the program can return the number of times a word appears in a string.
