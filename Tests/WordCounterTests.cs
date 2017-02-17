@@ -33,7 +33,7 @@ namespace WordCounterApp.Objects
 
         [Fact]
         // test if the program can successfully break the large string into discreet segments
-        public void WordLister_Split_LongStringSplit()
+        public void StringSplitter_Split_ArrayofWords()
         {
             // Arrange
             string newLongString = "This is a string";
@@ -51,7 +51,7 @@ namespace WordCounterApp.Objects
 
         [Fact]
         // test if the program can check target word against others
-        public void WordLister_Split_LongStringSplit()
+        public void CheckWord_SingleCheck_False()
         {
             // Arrange
             string newLongString = "This is a string";

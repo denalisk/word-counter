@@ -16,6 +16,12 @@ namespace WordCounterApp.Objects
             _longString = newLongString;
         }
 
+        // Check to see if a given word is the target word
+        public bool CheckWord(string word)
+        {
+            return true;
+        }
+
         // Split the long string of words into separate discreet words by whitespaces
         public void StringSplitter()
         {
