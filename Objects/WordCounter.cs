@@ -28,7 +28,7 @@ namespace WordCounterApp.Objects
                     wordCounter++;
                 }
             }
-            _wordCount = 11;
+            _wordCount = wordCounter;
             if (wordCounter != 0)
             {
                 return true;
