@@ -17,7 +17,7 @@ namespace WordCounterApp.Objects
             _longString = newLongString;
         }
 
-        // find the target word in a series of words, and count them
+        // find the target word in a series of words, and count the instances
         public bool FindWord()
         {
             int wordCounter = 0;
