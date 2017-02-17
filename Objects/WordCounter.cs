@@ -14,7 +14,7 @@ namespace WordCounterApp.Objects
 
         public string GetLongString()
         {
-            return "blah";
+            return _longString;
         }
     }
 }
